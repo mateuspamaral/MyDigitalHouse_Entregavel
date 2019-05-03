@@ -113,9 +113,9 @@ public class DigitalHouseManager {
         ProfessorAdjunto professorAdjunto = new ProfessorAdjunto();
 
         for (Professor professor : professorList){
-            if (professor.getCodProfessor() == codigoProfessorTitular){
+            if (professor.getCodProfessor().equals(codigoProfessorTitular)){
                 professorTitular = (ProfessorTitular) professor;
-            } else if (professor.getCodProfessor() == codigoProfessorAdjunto){
+            } else if (professor.getCodProfessor().equals(codigoProfessorAdjunto)){
                 professorAdjunto = (ProfessorAdjunto) professor;
             }
         }
