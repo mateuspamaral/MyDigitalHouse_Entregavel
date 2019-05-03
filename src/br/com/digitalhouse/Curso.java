@@ -1,5 +1,6 @@
 package br.com.digitalhouse;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Curso {
@@ -9,7 +10,7 @@ public class Curso {
     private ProfessorTitular professorTitular;
     private ProfessorAdjunto professorAdjunto;
     private Integer quantidadeMaximaDeAlunos;
-    private List<Aluno> alunoList;
+    private List<Aluno> alunoList = new ArrayList<>();
 
     //Constructors
     public Curso(String nome, Integer codigoCurso, ProfessorTitular professorTitular, ProfessorAdjunto professorAdjunto, Integer quantidadeMaximaDeAlunos, List<Aluno> alunoList) {
