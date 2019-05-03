@@ -102,9 +102,9 @@ public class DigitalHouseManager {
         if (curso.adicionarUmAluno(aluno)) {
             Matricula matricula = new Matricula(aluno, curso);
             matriculaList.add(matricula);
-            System.out.println("Matrícula do aluno " + aluno.getNome() + " " + aluno.getSobrenome() + " realizada com sucesso!");
+            System.out.println("Matrícula do(a) aluno(a) " + aluno.getNome() + " " + aluno.getSobrenome() + " realizada com sucesso!");
         } else {
-            System.out.println("O curso está sem vagas, a matrícula não pode ser realizada.");
+            System.out.println("O curso está sem vagas, a matrícula do(a) aluno(a) " + aluno.getNome() + " " + aluno.getSobrenome() + "não pode ser realizada.");
         }
     }
 
