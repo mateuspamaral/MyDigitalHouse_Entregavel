@@ -6,13 +6,13 @@ public class Aluno {
     //Attributes
     private String nome;
     private String sobrenome;
-    private Integer codAluno;
+    private Integer codigoAluno;
 
     //Constructors
-    public Aluno(String nome, String sobrenome, Integer codAluno) {
+    public Aluno(String nome, String sobrenome, Integer codigoAluno) {
         this.nome = nome;
         this.sobrenome = sobrenome;
-        this.codAluno = codAluno;
+        this.codigoAluno = codigoAluno;
     }
 
     public Aluno() {
@@ -35,12 +35,12 @@ public class Aluno {
         this.sobrenome = sobrenome;
     }
 
-    public Integer getCodAluno() {
-        return codAluno;
+    public Integer getCodigoAluno() {
+        return codigoAluno;
     }
 
     public void setCodAluno(Integer codAluno) {
-        this.codAluno = codAluno;
+        this.codigoAluno = codAluno;
     }
 
     //Overriders
@@ -49,6 +49,6 @@ public class Aluno {
         if (this == o) return true;
         if (!(o instanceof Aluno)) return false;
         Aluno aluno = (Aluno) o;
-        return getCodAluno().equals(aluno.getCodAluno());
+        return getCodigoAluno().equals(aluno.getCodigoAluno());
     }
 }

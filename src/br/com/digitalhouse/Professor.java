@@ -4,17 +4,17 @@ import java.util.Objects;
 
 public abstract class Professor {
     //Attributes
-    protected String nome;
-    protected String sobrenome;
-    protected Integer tempoCasa;
-    protected Integer codProfessor;
+    private String nome;
+    private String sobrenome;
+    private Integer tempoCasa;
+    private Integer codigoProfessor;
 
     //Constructors
-    public Professor(String nome, String sobrenome, Integer tempoCasa, Integer codProfessor) {
+    public Professor(String nome, String sobrenome, Integer tempoCasa, Integer codigoProfessor) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.tempoCasa = tempoCasa;
-        this.codProfessor = codProfessor;
+        this.codigoProfessor = codigoProfessor;
     }
 
     public Professor() {
@@ -45,12 +45,12 @@ public abstract class Professor {
         this.tempoCasa = tempoCasa;
     }
 
-    public Integer getCodProfessor() {
-        return codProfessor;
+    public Integer getCodigoProfessor() {
+        return codigoProfessor;
     }
 
     public void setCodProfessor(Integer codProfessor) {
-        this.codProfessor = codProfessor;
+        this.codigoProfessor = codProfessor;
     }
 
     //Overriders
@@ -59,7 +59,7 @@ public abstract class Professor {
         if (this == o) return true;
         if (!(o instanceof Professor)) return false;
         Professor professor = (Professor) o;
-        return Objects.equals(getCodProfessor(), professor.getCodProfessor());
+        return Objects.equals(getCodigoProfessor(), professor.getCodigoProfessor());
     }
 
 }

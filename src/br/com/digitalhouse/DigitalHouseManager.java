@@ -75,7 +75,7 @@ public class DigitalHouseManager {
     }
 
     public void excluirProfessor(Integer codigoProfessor) {
-        professorList.removeIf(professor -> professor.getCodProfessor().equals(codigoProfessor));
+        professorList.removeIf(professor -> professor.getCodigoProfessor().equals(codigoProfessor));
     }
 
     public void matricularAluno(String nome, String sobrenome, Integer codigoAluno) {
@@ -88,7 +88,7 @@ public class DigitalHouseManager {
         Curso curso = new Curso();
 
         for (Aluno obj : alunoList) {
-            if (obj.getCodAluno().equals(codigoAluno)) {
+            if (obj.getCodigoAluno().equals(codigoAluno)) {
                 aluno = obj;
             }
         }
@@ -104,7 +104,7 @@ public class DigitalHouseManager {
             matriculaList.add(matricula);
             System.out.println("Matrícula do(a) aluno(a) " + aluno.getNome() + " " + aluno.getSobrenome() + " realizada com sucesso!");
         } else {
-            System.out.println("O curso está sem vagas, a matrícula do(a) aluno(a) " + aluno.getNome() + " " + aluno.getSobrenome() + "não pode ser realizada.");
+            System.out.println("O curso está sem vagas, a matrícula do(a) aluno(a) " + aluno.getNome() + " " + aluno.getSobrenome() + " não pode ser realizada.");
         }
     }
 
@@ -113,9 +113,9 @@ public class DigitalHouseManager {
         ProfessorAdjunto professorAdjunto = new ProfessorAdjunto();
 
         for (Professor professor : professorList){
-            if (professor.getCodProfessor().equals(codigoProfessorTitular)){
+            if (professor.getCodigoProfessor().equals(codigoProfessorTitular)){
                 professorTitular = (ProfessorTitular) professor;
-            } else if (professor.getCodProfessor().equals(codigoProfessorAdjunto)){
+            } else if (professor.getCodigoProfessor().equals(codigoProfessorAdjunto)){
                 professorAdjunto = (ProfessorAdjunto) professor;
             }
         }
